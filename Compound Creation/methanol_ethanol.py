@@ -33,106 +33,111 @@ from idaes.models.properties.modular_properties.phase_equil.bubble_dew import (
 from idaes.models.properties.modular_properties.phase_equil.forms import fugacity
 from idaes.models.properties.modular_properties.pure import Perrys
 from idaes.models.properties.modular_properties.pure import RPP4
+from idaes.models.properties.modular_properties.pure import NIST
 
 
 # Set up logger
 _log = idaeslog.getLogger(__name__)
 
 
-# ---------------------------------------------------------------------
-# Configuration dictionary for an ideal Benzene-Toluene system
-
+'''
 # Data Sources:
-# [1] The Properties of Gases and Liquids (1987)
-#     4th edition, Chemical Engineering Series - Robert C. Reid
-# [2] Perry's Chemical Engineers' Handbook 7th Ed.
-# [3] Engineering Toolbox, https://www.engineeringtoolbox.com
-#     Retrieved 1st December, 2019
+[1]  The Properties of Gases and Liquids (1987) 4th edition, Chemical Engineering Series - Robert C. Reid
+[2]  Perry's Chemical Engineers' Handbook 7th Ed.
+[3]  https://webbook.nist.gov/cgi/cbook.cgi?ID=C67561&Units=SI&Mask=4#Thermo-Phase
+[4]  https://webbook.nist.gov/cgi/cbook.cgi?ID=C67561&Units=SI&Mask=2#Thermo-Condensed
+[5]  https://webbook.nist.gov/cgi/cbook.cgi?ID=C67561&Units=SI&Mask=1#Thermo-Gas
+[6]  https://webbook.nist.gov/cgi/cbook.cgi?ID=C67561&Units=SI&Mask=4#Thermo-Phase
+[7]  https://webbook.nist.gov/cgi/cbook.cgi?Name=ethanol&Units=SI
+[8]  https://webbook.nist.gov/cgi/cbook.cgi?ID=C64175&Units=SI&Mask=4#Thermo-Phase
+[9]  https://webbook.nist.gov/cgi/cbook.cgi?ID=C64175&Units=SI&Mask=1#Thermo-Gas
+[10] https://webbook.nist.gov/cgi/cbook.cgi?ID=C64175&Units=SI&Mask=2#Thermo-Condensed
+
+'''
+
 
 configuration = {
     # Specifying components
     "components": {
         "methanol": {
             "type": Component,
-            "elemental_composition": {"C": 6, "H": 6},
+            "elemental_composition": {"C": 1, "H": 4, "O": 1},
             "dens_mol_liq_comp": Perrys,
             "enth_mol_liq_comp": Perrys,
             "enth_mol_ig_comp": RPP4,
-            "pressure_sat_comp": RPP4,
+            "pressure_sat_comp": NIST,
             "phase_equilibrium_form": {("Vap", "Liq"): fugacity},
             "parameter_data": {
-                "mw": (78.1136e-3, pyunits.kg / pyunits.mol),  # [1]
-                "pressure_crit": (48.9e5, pyunits.Pa),  # [1]
-                "temperature_crit": (562.2, pyunits.K),  # [1]
+                "mw": (32.0419e-3, pyunits.kg / pyunits.mol),  # [4]
+                "pressure_crit": (81.1e5, pyunits.Pa),  # [4]
+                "temperature_crit": (513.1, pyunits.K),  # [4]
                 "dens_mol_liq_comp_coeff": {
                     "eqn_type": 1,
-                    "1": (1.0162, pyunits.kmol * pyunits.m**-3),  # [2] pg. 2-98
+                    "1": (1.0162, pyunits.kmol * pyunits.m**-3),  # To be updated
                     "2": (0.2655, None),
                     "3": (562.16, pyunits.K),
                     "4": (0.28212, None),
                 },
                 "cp_mol_ig_comp_coeff": {
-                    "A": (-3.392e1, pyunits.J / pyunits.mol / pyunits.K),  # [1]
+                    "A": (-3.392e1, pyunits.J / pyunits.mol / pyunits.K),  # To be updated
                     "B": (4.739e-1, pyunits.J / pyunits.mol / pyunits.K**2),
                     "C": (-3.017e-4, pyunits.J / pyunits.mol / pyunits.K**3),
                     "D": (7.130e-8, pyunits.J / pyunits.mol / pyunits.K**4),
                 },
                 "cp_mol_liq_comp_coeff": {
-                    "1": (1.29e2, pyunits.J / pyunits.kmol / pyunits.K),  # [2]
+                    "1": (1.29e2, pyunits.J / pyunits.kmol / pyunits.K),  # To be updated
                     "2": (-1.7e-1, pyunits.J / pyunits.kmol / pyunits.K**2),
                     "3": (6.48e-4, pyunits.J / pyunits.kmol / pyunits.K**3),
                     "4": (0, pyunits.J / pyunits.kmol / pyunits.K**4),
                     "5": (0, pyunits.J / pyunits.kmol / pyunits.K**5),
                 },
-                "enth_mol_form_liq_comp_ref": (49.0e3, pyunits.J / pyunits.mol),  # [3]
-                "enth_mol_form_vap_comp_ref": (82.9e3, pyunits.J / pyunits.mol),  # [3]
+                "enth_mol_form_liq_comp_ref": (-250.6e3, pyunits.J / pyunits.mol),  # [4]
+                "enth_mol_form_vap_comp_ref": (-205.0e3, pyunits.J / pyunits.mol),  # [5]
                 "pressure_sat_comp_coeff": {
-                    "A": (-6.98273, None),  # [1]
-                    "B": (1.33213, None),
-                    "C": (-2.62863, None),
-                    "D": (-3.33399, None),
+                    "A": (5.15853, None),  # [6] Temp range 353.5 to 512.63 K
+                    "B": (1569.613, None),
+                    "C": (-34.846, None),
                 },
             },
         },
         "ethanol": {
             "type": Component,
-            "elemental_composition": {"C": 7, "H": 8},
+            "elemental_composition": {"C": 2, "H": 6, "O": 1},
             "dens_mol_liq_comp": Perrys,
             "enth_mol_liq_comp": Perrys,
             "enth_mol_ig_comp": RPP4,
-            "pressure_sat_comp": RPP4,
+            "pressure_sat_comp": NIST,
             "phase_equilibrium_form": {("Vap", "Liq"): fugacity},
             "parameter_data": {
-                "mw": (92.1405e-3, pyunits.kg / pyunits.mol),  # [1]
-                "pressure_crit": (41e5, pyunits.Pa),  # [1]
-                "temperature_crit": (591.8, pyunits.K),  # [1]
+                "mw": (46.068e-3, pyunits.kg / pyunits.mol),  # [7]
+                "pressure_crit": (63.4e5, pyunits.Pa),  # [7]
+                "temperature_crit": (514.7, pyunits.K),  # [7]
                 "dens_mol_liq_comp_coeff": {
                     "eqn_type": 1,
-                    "1": (0.8488, pyunits.kmol * pyunits.m**-3),  # [2] pg. 2-98
+                    "1": (0.8488, pyunits.kmol * pyunits.m**-3),  # [2] pg. 2-98 To be updated
                     "2": (0.26655, None),
                     "3": (591.8, pyunits.K),
                     "4": (0.2878, None),
                 },
                 "cp_mol_ig_comp_coeff": {
-                    "A": (-2.435e1, pyunits.J / pyunits.mol / pyunits.K),  # [1]
+                    "A": (-2.435e1, pyunits.J / pyunits.mol / pyunits.K),  # [1] To be updated
                     "B": (5.125e-1, pyunits.J / pyunits.mol / pyunits.K**2),
                     "C": (-2.765e-4, pyunits.J / pyunits.mol / pyunits.K**3),
                     "D": (4.911e-8, pyunits.J / pyunits.mol / pyunits.K**4),
                 },
                 "cp_mol_liq_comp_coeff": {
-                    "1": (1.40e2, pyunits.J / pyunits.kmol / pyunits.K),  # [2]
+                    "1": (1.40e2, pyunits.J / pyunits.kmol / pyunits.K),  # [2] To be updated
                     "2": (-1.52e-1, pyunits.J / pyunits.kmol / pyunits.K**2),
                     "3": (6.95e-4, pyunits.J / pyunits.kmol / pyunits.K**3),
                     "4": (0, pyunits.J / pyunits.kmol / pyunits.K**4),
                     "5": (0, pyunits.J / pyunits.kmol / pyunits.K**5),
                 },
-                "enth_mol_form_liq_comp_ref": (12.0e3, pyunits.J / pyunits.mol),  # [3]
-                "enth_mol_form_vap_comp_ref": (50.1e3, pyunits.J / pyunits.mol),  # [3]
+                "enth_mol_form_liq_comp_ref": (-276.2e3, pyunits.J / pyunits.mol),  # [10]
+                "enth_mol_form_vap_comp_ref": (-234.2e3, pyunits.J / pyunits.mol),  # [9]
                 "pressure_sat_comp_coeff": {
-                    "A": (-7.28607, None),  # [1]
-                    "B": (1.38091, None),
-                    "C": (-2.83433, None),
-                    "D": (-2.79168, None),
+                    "A": (4.92531, None),  # [8] Temp range 364.8 to 513.91 K
+                    "B": (1432.526, None),
+                    "C": (-61.819, None),
                 },
             },
         },

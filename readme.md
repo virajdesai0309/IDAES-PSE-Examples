@@ -35,7 +35,7 @@ idaes get-extensions
 ## Tutorials and Examples links
 
 > [!IMPORTANT]
-> Note that Python 3.8 is no longer officially supported.
+> To be updated
 
 ## Documentation and links
 

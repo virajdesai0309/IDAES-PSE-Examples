@@ -1,4 +1,4 @@
-# IDAES PSE Examples
+# IDAES PSE Examples Repository
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Pyomo](https://img.shields.io/badge/Pyomo-6.x-brightgreen)](http://www.pyomo.org/)
@@ -10,7 +10,7 @@ This repository contains example notebooks and scripts using the **IDAES PSE (Pr
 
 ---
 
-## 📦 Setting Up Your Environment
+## Setting Up Your Environment
 
 ### 1. Clone This Repository
 ```bash
@@ -32,18 +32,25 @@ pip install idaes-pse
 idaes get-extensions
 ```
 
-## Tutorials and Examples links
+## Tutorials and Examples
+
+> [!TIP]
+> Click on the link to access the tutorial and example notebooks.
 
 | **Tutorial**           | **Description**                                                                 |
 |-------------------------|---------------------------------------------------------------------------------|
-| [Compound Creation](Compound%20Creation) | Learn how to create and configure compounds for process modeling.              |
-| TBA             | TBA    |
+| [Compound Creation](Compound_Creation) | Learn how to create and configure compounds for process modeling.              |
+| [Flash](Flash)             | Learn how to create and configure flash unit opeation.  |
 
 > [!IMPORTANT]
-> To be updated
+> The following tutorials are in progress
+
+| **Tutorial**           | **Description**                                                                 |
+|-------------------------|---------------------------------------------------------------------------------|
+| [Pump]() | Learn how to create and configure pump unit opeation for process modeling.              |
+| [Heater]() | Learn how to create and configure heater unit opeation and process modelling. |
 
 ## Documentation and links
 
 - [IDAES PSE Documentation](https://idaes-pse.readthedocs.io/en/stable/)
 - [IDAES PSE GitHub Repository](https://github.com/IDAES/idaes-pse)
-

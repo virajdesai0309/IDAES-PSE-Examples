@@ -95,8 +95,8 @@ configuration = {
                 "enth_mol_form_vap_comp_ref": (-205.0e3, pyunits.J / pyunits.mol),  # [5]
                 "pressure_sat_comp_coeff": {
                     "A": (5.15853, None),  # [6] Temp range 353.5 to 512.63 K
-                    "B": (1569.613, None),
-                    "C": (-34.846, None),
+                    "B": (1569.613, pyunits.K),
+                    "C": (-34.846, pyunits.K),
                 },
             },
         },
@@ -136,8 +136,8 @@ configuration = {
                 "enth_mol_form_vap_comp_ref": (-234.2e3, pyunits.J / pyunits.mol),  # [9]
                 "pressure_sat_comp_coeff": {
                     "A": (4.92531, None),  # [8] Temp range 364.8 to 513.91 K
-                    "B": (1432.526, None),
-                    "C": (-61.819, None),
+                    "B": (1432.526, pyunits.K),
+                    "C": (-61.819, pyunits.K),
                 },
             },
         },

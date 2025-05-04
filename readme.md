@@ -34,6 +34,11 @@ idaes get-extensions
 
 ## Tutorials and Examples links
 
+| **Tutorial**           | **Description**                                                                 |
+|-------------------------|---------------------------------------------------------------------------------|
+| [Compound Creation](Compound%20Creation) | Learn how to create and configure compounds for process modeling.              |
+| TBA             | TBA    |
+
 > [!IMPORTANT]
 > To be updated
 

@@ -73,21 +73,21 @@ configuration = {
                 "temperature_crit": (513.1, pyunits.K),  # [4]
                 "dens_mol_liq_comp_coeff": {
                     "eqn_type": 1,
-                    "1": (1.0162, pyunits.kmol * pyunits.m**-3),  # To be updated
-                    "2": (0.2655, None),
-                    "3": (562.16, pyunits.K),
-                    "4": (0.28212, None),
+                    "1": (2.288, pyunits.kmol * pyunits.m**-3),  # [2]
+                    "2": (0.2685, None),
+                    "3": (512.64, pyunits.K),
+                    "4": (0.2453, None),
                 },
                 "cp_mol_ig_comp_coeff": {
-                    "A": (-3.392e1, pyunits.J / pyunits.mol / pyunits.K),  # To be updated
-                    "B": (4.739e-1, pyunits.J / pyunits.mol / pyunits.K**2),
-                    "C": (-3.017e-4, pyunits.J / pyunits.mol / pyunits.K**3),
-                    "D": (7.130e-8, pyunits.J / pyunits.mol / pyunits.K**4),
+                    "A": (2.11e1, pyunits.J / pyunits.mol / pyunits.K),  # [1]
+                    "B": (7.092e-2, pyunits.J / pyunits.mol / pyunits.K**2),
+                    "C": (2.587e-5, pyunits.J / pyunits.mol / pyunits.K**3),
+                    "D": (-2.852e-8, pyunits.J / pyunits.mol / pyunits.K**4),
                 },
                 "cp_mol_liq_comp_coeff": {
-                    "1": (1.29e2, pyunits.J / pyunits.kmol / pyunits.K),  # To be updated
-                    "2": (-1.7e-1, pyunits.J / pyunits.kmol / pyunits.K**2),
-                    "3": (6.48e-4, pyunits.J / pyunits.kmol / pyunits.K**3),
+                    "1": (1.058e5, pyunits.J / pyunits.kmol / pyunits.K),  # [2]
+                    "2": (-3.6223e2, pyunits.J / pyunits.kmol / pyunits.K**2),
+                    "3": (9.3790e-01, pyunits.J / pyunits.kmol / pyunits.K**3),
                     "4": (0, pyunits.J / pyunits.kmol / pyunits.K**4),
                     "5": (0, pyunits.J / pyunits.kmol / pyunits.K**5),
                 },
@@ -114,22 +114,22 @@ configuration = {
                 "temperature_crit": (514.7, pyunits.K),  # [7]
                 "dens_mol_liq_comp_coeff": {
                     "eqn_type": 1,
-                    "1": (0.8488, pyunits.kmol * pyunits.m**-3),  # [2] pg. 2-98 To be updated
-                    "2": (0.26655, None),
-                    "3": (591.8, pyunits.K),
-                    "4": (0.2878, None),
+                    "1": (1.648, pyunits.kmol * pyunits.m**-3),  # [2] pg. 2-98 To be updated
+                    "2": (0.27627, None),
+                    "3": (513.92, pyunits.K),
+                    "4": (0.2331, None),
                 },
                 "cp_mol_ig_comp_coeff": {
-                    "A": (-2.435e1, pyunits.J / pyunits.mol / pyunits.K),  # [1] To be updated
-                    "B": (5.125e-1, pyunits.J / pyunits.mol / pyunits.K**2),
-                    "C": (-2.765e-4, pyunits.J / pyunits.mol / pyunits.K**3),
-                    "D": (4.911e-8, pyunits.J / pyunits.mol / pyunits.K**4),
+                    "A": (9.014e0, pyunits.J / pyunits.mol / pyunits.K),  # [1]
+                    "B": (2.141e-1, pyunits.J / pyunits.mol / pyunits.K**2),
+                    "C": (-8.390e-5, pyunits.J / pyunits.mol / pyunits.K**3),
+                    "D": (1.373e-9, pyunits.J / pyunits.mol / pyunits.K**4),
                 },
                 "cp_mol_liq_comp_coeff": {
-                    "1": (1.40e2, pyunits.J / pyunits.kmol / pyunits.K),  # [2] To be updated
-                    "2": (-1.52e-1, pyunits.J / pyunits.kmol / pyunits.K**2),
-                    "3": (6.95e-4, pyunits.J / pyunits.kmol / pyunits.K**3),
-                    "4": (0, pyunits.J / pyunits.kmol / pyunits.K**4),
+                    "1": (1.0264e5, pyunits.J / pyunits.kmol / pyunits.K),  # [2] To be updated
+                    "2": (-1.3963e2, pyunits.J / pyunits.kmol / pyunits.K**2),
+                    "3": (-3.0341e-2, pyunits.J / pyunits.kmol / pyunits.K**3),
+                    "4": (2.0386e-03, pyunits.J / pyunits.kmol / pyunits.K**4),
                     "5": (0, pyunits.J / pyunits.kmol / pyunits.K**5),
                 },
                 "enth_mol_form_liq_comp_ref": (-276.2e3, pyunits.J / pyunits.mol),  # [10]

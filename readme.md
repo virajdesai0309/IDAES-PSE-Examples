@@ -44,13 +44,13 @@ idaes get-extensions
 | [Pump](Pump) | Learn how to create and configure pump unit opeation for process modeling.              |
 | [Heater](Heater_Cooler) | Learn how to create and configure heater unit opeation and process modelling. |
 | [Mixer](Mixer) | Learn how to create and configure mixer unit opeation and process modelling. |
+| [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit opeation and process modelling. |
 
 > [!IMPORTANT]
 > The following tutorials are in progress
 
 | **Tutorial**           | **Description**                                                                 |
 |-------------------------|---------------------------------------------------------------------------------|
-| [Separator(Splitter)]() | Learn how to create and configure separator aka splitter unit opeation and process modelling. |
 | [Compressor]() | Learn how to create and configure compressor unit opeation and process modelling. |
 | [Turbine]() | Learn how to create and configure turbine unit opeation and process modelling. |
 | [Valve]() | Learn how to create and configure valve unit opeation and process modelling. |

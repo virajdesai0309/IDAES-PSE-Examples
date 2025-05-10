@@ -17,6 +17,9 @@ phase equilibrium in the generic framework using ideal liquid and vapor
 assumptions along with methods drawn from the pre-built IDAES property
 libraries.
 """
+
+__author__ = "Viraj Desai"
+
 # Import Pyomo units
 from pyomo.environ import units as pyunits
 

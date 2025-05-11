@@ -1,15 +1,38 @@
+# Import necessary Pyomo components
 from pyomo.environ import ConcreteModel, value, TransformationFactory, units as pyunits
+
+# Import the solver utility from IDAES
 from idaes.core.solvers import get_solver
+
+# Import the FlowsheetBlock for creating process flowsheets
 from idaes.core import FlowsheetBlock
+
+# Import unit models for feed, product, and heat exchanger
 from idaes.models.unit_models import Feed, Product, HeatExchanger
+
+# Import property packages for steam and generic properties
 from idaes.models.properties import iapws95
 from idaes.models.properties.iapws95 import htpx
+
+# Import the LMTD temperature difference callback for the heat exchanger
 from idaes.models.unit_models.heat_exchanger import delta_temperature_lmtd_smooth_callback
+
+# Import the IDAES logger for logging purposes
 import idaes.logger as idaeslog
+
+# Import the generic property package base class
 from idaes.models.properties.modular_properties.base.generic_property import GenericParameterBlock
+
+# Import the configuration for methanol-ethanol property package
 from methanol_ethanol import configuration
+
+# Import utility for checking degrees of freedom in the model
 from idaes.core.util.model_statistics import degrees_of_freedom
+
+# Import the Arc component for connecting unit models
 from pyomo.network import Arc
+
+# Import utility for creating stream tables
 from idaes.core.util.tables import create_stream_table_dataframe
 
 def setup_heatexchanger_model(
@@ -95,28 +118,3 @@ def report_heatexchanger_properties(model):
     })
     
     return report
-
-# Example Usage
-if __name__ == "__main__":
-    feed_stream = {
-        "flow_mol": 1.0,
-        "mole_frac_methanol": 0.5,
-        "mole_frac_ethanol": 0.5,
-        "pressure": 101325,
-        "temperature": 300
-    }
-    water_stream = {
-        "flow_mol": 1.0,
-        "pressure": 101325,
-        "temperature": 380
-    }
-    
-    # Create and solve model
-    m, results = setup_heatexchanger_model(feed_stream, water_stream, hx_area=1.0, hx_u=100.0)
-    
-    # Generate report
-    report = report_heatexchanger_properties(m)
-    print("\nHeat Duty:", report["heat_duty"], "W")
-    print("ΔT Driving Force:", report["delta_T"], "K")
-    print("\nStream Table:")
-    print(report["stream_table"])

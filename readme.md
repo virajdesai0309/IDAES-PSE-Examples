@@ -57,6 +57,7 @@ idaes get-extensions
 | [Translator]() | Learn how to create and configure translator unit opeation and process modelling. |
 | [Statejunction]() | Learn how to create and configure statejunction unit opeation and process modelling. |
 | [HeatExchanger 0D]() | Learn how to create and configure heat exchanger 0D unit opeation and process modelling. |
+| [HeatExchanger 1D]() | Learn how to create and configure heat exchanger 1D unit opeation and process modelling. |
 
 ## Documentation and links
 

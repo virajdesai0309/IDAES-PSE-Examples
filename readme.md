@@ -45,6 +45,8 @@ idaes get-extensions
 | [Heater](Heater_Cooler) | Learn how to create and configure heater unit opeation and process modelling. |
 | [Mixer](Mixer) | Learn how to create and configure mixer unit opeation and process modelling. |
 | [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit opeation and process modelling. |
+| [HeatExchanger 0D](Heat_Exchanger_0D) | Learn how to create and configure heat exchanger 0D unit opeation and process modelling. |
+| [HeatExchanger 1D](Heat_Exchanger_1D) | Learn how to create and configure heat exchanger 1D unit opeation and process modelling. |
 
 > [!IMPORTANT]
 > The following tutorials are in progress
@@ -56,8 +58,6 @@ idaes get-extensions
 | [Valve]() | Learn how to create and configure valve unit opeation and process modelling. |
 | [Translator]() | Learn how to create and configure translator unit opeation and process modelling. |
 | [Statejunction]() | Learn how to create and configure statejunction unit opeation and process modelling. |
-| [HeatExchanger 0D]() | Learn how to create and configure heat exchanger 0D unit opeation and process modelling. |
-| [HeatExchanger 1D]() | Learn how to create and configure heat exchanger 1D unit opeation and process modelling. |
 
 ## Documentation and links
 

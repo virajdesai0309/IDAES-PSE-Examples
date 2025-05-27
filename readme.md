@@ -40,24 +40,24 @@ idaes get-extensions
 | **Tutorial**           | **Description**                                                                 |
 |-------------------------|---------------------------------------------------------------------------------|
 | [Compound Creation](Compound_Creation) | Learn how to create and configure compounds for process modeling.              |
-| [Flash](Flash)             | Learn how to create and configure flash unit opeation.  |
-| [Pump](Pump) | Learn how to create and configure pump unit opeation for process modeling.              |
-| [Heater](Heater_Cooler) | Learn how to create and configure heater unit opeation and process modelling. |
-| [Mixer](Mixer) | Learn how to create and configure mixer unit opeation and process modelling. |
-| [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit opeation and process modelling. |
-| [HeatExchanger 0D](Heat_Exchanger_0D) | Learn how to create and configure heat exchanger 0D unit opeation and process modelling. |
-| [HeatExchanger 1D](Heat_Exchanger_1D) | Learn how to create and configure heat exchanger 1D unit opeation and process modelling. |
+| [Flash](Flash)             | Learn how to create and configure flash unit operation.  |
+| [Pump](Pump) | Learn how to create and configure pump unit operation for process modeling.              |
+| [Heater](Heater_Cooler) | Learn how to create and configure heater unit operation and process modelling. |
+| [Mixer](Mixer) | Learn how to create and configure mixer unit operation and process modelling. |
+| [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit operation and process modelling. |
+| [HeatExchanger 0D](Heat_Exchanger_0D) | Learn how to create and configure heat exchanger 0D unit operation and process modelling. |
+| [HeatExchanger 1D](Heat_Exchanger_1D) | Learn how to create and configure heat exchanger 1D unit operation and process modelling. |
 
 > [!IMPORTANT]
 > The following tutorials are in progress
 
 | **Tutorial**           | **Description**                                                                 |
 |-------------------------|---------------------------------------------------------------------------------|
-| [Compressor]() | Learn how to create and configure compressor unit opeation and process modelling. |
-| [Turbine]() | Learn how to create and configure turbine unit opeation and process modelling. |
-| [Valve]() | Learn how to create and configure valve unit opeation and process modelling. |
-| [Translator]() | Learn how to create and configure translator unit opeation and process modelling. |
-| [Statejunction]() | Learn how to create and configure statejunction unit opeation and process modelling. |
+| [Compressor]() | Learn how to create and configure compressor unit operation and process modelling. |
+| [Turbine]() | Learn how to create and configure turbine unit operation and process modelling. |
+| [Valve]() | Learn how to create and configure valve unit operation and process modelling. |
+| [Translator]() | Learn how to create and configure translator unit operation and process modelling. |
+| [Statejunction]() | Learn how to create and configure statejunction unit operation and process modelling. |
 
 ## Documentation and links
 

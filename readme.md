@@ -39,10 +39,11 @@ idaes get-extensions
 
 | **Tutorial**           | **Description**                                                                 |
 |-------------------------|---------------------------------------------------------------------------------|
-| [Compound Creation](Compound_Creation) | Learn how to create and configure compounds for process modeling.              |
-| [Flash](Flash)             | Learn how to create and configure flash unit operation.  |
-| [Pump](Pump) | Learn how to create and configure pump unit operation for process modeling.              |
+| [Compound Creation](Compound_Creation) | Learn how to create and configure compounds for process modeling. |
+| [Flash](Flash) | Learn how to create and configure flash unit operation.  |
 | [Heater](Heater_Cooler) | Learn how to create and configure heater unit operation and process modelling. |
+| [Pump](Pump) | Learn how to create and configure pump unit operation for process modeling. |
+| [Pump Curves](Pump_Curves) | Learn how to create and configure pump unit operation using pump curves for process modeling. |
 | [Mixer](Mixer) | Learn how to create and configure mixer unit operation and process modelling. |
 | [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit operation and process modelling. |
 | [HeatExchanger 0D](Heat_Exchanger_0D) | Learn how to create and configure heat exchanger 0D unit operation and process modelling. |

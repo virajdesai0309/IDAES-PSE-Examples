@@ -173,5 +173,5 @@ ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper right')
 
 plt.tight_layout()
 #plt.show()
-plt.savefig('pump_curves.png', dpi=300, bbox_inches='tight')
+plt.savefig('/home/viraj/Documents/Github/IDAES PSE Examples/Pump_Curves/pump_curves.png', dpi=300, bbox_inches='tight')
 print("Pump curves saved as 'pump_curves.png'")

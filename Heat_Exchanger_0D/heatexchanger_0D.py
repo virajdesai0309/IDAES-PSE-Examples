@@ -1,5 +1,5 @@
 # Import necessary Pyomo components
-from pyomo.environ import ConcreteModel, value, TransformationFactory, units as pyunits
+from pyomo.environ import ConcreteModel, value, TransformationFactory, SolverFactory, units as pyunits
 
 # Import the solver utility from IDAES
 from idaes.core.solvers import get_solver
@@ -10,7 +10,7 @@ from idaes.core import FlowsheetBlock
 # Import unit models for feed, product, and heat exchanger
 from idaes.models.unit_models import Feed, Product, HeatExchanger
 
-# Import property packages for steam and generic properties
+# Import property packages for cooling_water_in and generic properties
 from idaes.models.properties import iapws95
 from idaes.models.properties.iapws95 import htpx
 
@@ -52,21 +52,21 @@ def setup_heatexchanger_model(
     # Build units
     m.fs.feed = Feed(property_package=m.fs.properties)
     m.fs.product = Product(property_package=m.fs.properties)
-    m.fs.steam = Feed(property_package=m.fs.steam_properties)
-    m.fs.condensate = Product(property_package=m.fs.steam_properties)
+    m.fs.cooling_water_in = Feed(property_package=m.fs.steam_properties)
+    m.fs.cooling_water_out = Product(property_package=m.fs.steam_properties)
     m.fs.heat_exchanger = HeatExchanger(
         delta_temperature_callback=delta_temperature_lmtd_smooth_callback,
         hot_side_name="shell",
         cold_side_name="tube",
-        shell={"property_package": m.fs.steam_properties},
-        tube={"property_package": m.fs.properties},
+        shell={"property_package": m.fs.properties},
+        tube={"property_package": m.fs.steam_properties},
     )
     
     # Connect units with arcs
-    m.fs.s01 = Arc(source=m.fs.feed.outlet, destination=m.fs.heat_exchanger.cold_side_inlet)
-    m.fs.s02 = Arc(source=m.fs.steam.outlet, destination=m.fs.heat_exchanger.hot_side_inlet)
-    m.fs.s03 = Arc(source=m.fs.heat_exchanger.cold_side_outlet, destination=m.fs.product.inlet)
-    m.fs.s04 = Arc(source=m.fs.heat_exchanger.hot_side_outlet, destination=m.fs.condensate.inlet)
+    m.fs.s01 = Arc(source=m.fs.feed.outlet, destination=m.fs.heat_exchanger.hot_side_inlet)
+    m.fs.s02 = Arc(source=m.fs.cooling_water_in.outlet, destination=m.fs.heat_exchanger.cold_side_inlet)
+    m.fs.s03 = Arc(source=m.fs.heat_exchanger.hot_side_outlet, destination=m.fs.product.inlet)
+    m.fs.s04 = Arc(source=m.fs.heat_exchanger.cold_side_outlet, destination=m.fs.cooling_water_out.inlet)
     TransformationFactory("network.expand_arcs").apply_to(m)
     
     # Check initial DOF
@@ -79,14 +79,14 @@ def setup_heatexchanger_model(
     m.fs.feed.pressure[0].fix(feed_stream["pressure"])
     m.fs.feed.temperature[0].fix(feed_stream["temperature"])
     
-    # Fix steam conditions
-    m.fs.steam.outlet.flow_mol[0].fix(water_stream["flow_mol"])
-    m.fs.steam.outlet.pressure[0].fix(water_stream["pressure"])
+    # Fix cooling_water_in conditions
+    m.fs.cooling_water_in.outlet.flow_mol[0].fix(water_stream["flow_mol"])
+    m.fs.cooling_water_in.outlet.pressure[0].fix(water_stream["pressure"])
     steam_enthalpy = htpx(
         T=water_stream["temperature"] * pyunits.K,
         P=water_stream["pressure"] * pyunits.Pa
     )
-    m.fs.steam.outlet.enth_mol[0].fix(steam_enthalpy)
+    m.fs.cooling_water_in.outlet.enth_mol[0].fix(steam_enthalpy)
     
     # Fix HX parameters
     m.fs.heat_exchanger.area.fix(hx_area)
@@ -95,8 +95,15 @@ def setup_heatexchanger_model(
     # Check final DOF
     print(f"Final Degrees of Freedom: {degrees_of_freedom(m)}")
     
+    # Initialize the mode
+    m.fs.feed.initialize()
+    m.fs.cooling_water_in.initialize()
+    m.fs.heat_exchanger.initialize()
+    m.fs.product.initialize()
+    m.fs.cooling_water_out.initialize()
+    
     # Solve model
-    solver = get_solver()
+    solver = SolverFactory("ipopt")
     results = solver.solve(m, tee=False)
     
     return m, results
@@ -111,10 +118,10 @@ def report_heatexchanger_properties(model):
     
     # Stream table
     report["stream_table"] = create_stream_table_dataframe({
-        "Cold Inlet": model.fs.feed.outlet,
-        "Cold Outlet": model.fs.product.inlet,
-        "Hot Inlet": model.fs.steam.outlet,
-        "Hot Outlet": model.fs.condensate.inlet
+        "Hot Inlet": model.fs.feed.outlet,
+        "Hot Outlet": model.fs.product.inlet,
+        "Cold Inlet": model.fs.cooling_water_in.outlet,
+        "Cold Outlet": model.fs.cooling_water_out.inlet
     })
     
     return report

@@ -45,15 +45,15 @@ idaes get-extensions
 | [Pump](Pump) | Learn how to create and configure pump unit operation for process modeling. |
 | [Pump Curves](Pump_Curves) | Learn how to create and configure pump unit operation using pump curves for process modeling. |
 | [HeatExchanger 0D](Heat_Exchanger_0D) | Learn how to create and configure heat exchanger 0D unit operation and process modelling. |
-| [Mixer](Mixer) | Learn how to create and configure mixer unit operation and process modelling. |
-| [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit operation and process modelling. |
-| [HeatExchanger 1D](Heat_Exchanger_1D) | Learn how to create and configure heat exchanger 1D unit operation and process modelling. |
 
 > [!IMPORTANT]
 > The following tutorials are in progress
 
 | **Tutorial**           | **Description**                                                                 |
 |-------------------------|---------------------------------------------------------------------------------|
+| [Mixer](Mixer) | Learn how to create and configure mixer unit operation and process modelling. |
+| [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit operation and process modelling. |
+| [HeatExchanger 1D](Heat_Exchanger_1D) | Learn how to create and configure heat exchanger 1D unit operation and process modelling. |
 | [Compressor]() | Learn how to create and configure compressor unit operation and process modelling. |
 | [Turbine]() | Learn how to create and configure turbine unit operation and process modelling. |
 | [Valve]() | Learn how to create and configure valve unit operation and process modelling. |

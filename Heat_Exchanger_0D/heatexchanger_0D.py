@@ -47,19 +47,19 @@ def setup_heatexchanger_model(
     
     # Add property packages
     m.fs.properties = GenericParameterBlock(**configuration)
-    m.fs.steam_properties = iapws95.Iapws95ParameterBlock()
+    m.fs.water = iapws95.Iapws95ParameterBlock()
     
     # Build units
     m.fs.feed = Feed(property_package=m.fs.properties)
     m.fs.product = Product(property_package=m.fs.properties)
-    m.fs.cooling_water_in = Feed(property_package=m.fs.steam_properties)
-    m.fs.cooling_water_out = Product(property_package=m.fs.steam_properties)
+    m.fs.cooling_water_in = Feed(property_package=m.fs.water)
+    m.fs.cooling_water_out = Product(property_package=m.fs.water)
     m.fs.heat_exchanger = HeatExchanger(
         delta_temperature_callback=delta_temperature_lmtd_smooth_callback,
-        hot_side_name="shell",
-        cold_side_name="tube",
-        shell={"property_package": m.fs.properties},
-        tube={"property_package": m.fs.steam_properties},
+        hot_side_name="tube",
+        cold_side_name="shell",
+        shell={"property_package": m.fs.water},
+        tube={"property_package": m.fs.properties},
     )
     
     # Connect units with arcs
@@ -109,19 +109,11 @@ def setup_heatexchanger_model(
     return m, results
 
 def report_heatexchanger_properties(model):
-    """Generates a report with key metrics and stream tables."""
-    report = {}
+    """Report properties of the solved heat exchanger model."""
+    feed_prop = model.fs.feed.report()
+    cooling_water_in_prop = model.fs.cooling_water_in.report()
+    cooling_water_out_prop = model.fs.cooling_water_out.report()
+    product_prop = model.fs.product.report()
+    HEX_Report = model.fs.heat_exchanger.report()    
     
-    # Performance metrics
-    report["heat_duty"] = value(model.fs.heat_exchanger.heat_duty[0])
-    report["delta_T"] = value(model.fs.heat_exchanger.delta_temperature[0])
-    
-    # Stream table
-    report["stream_table"] = create_stream_table_dataframe({
-        "Hot Inlet": model.fs.feed.outlet,
-        "Hot Outlet": model.fs.product.inlet,
-        "Cold Inlet": model.fs.cooling_water_in.outlet,
-        "Cold Outlet": model.fs.cooling_water_out.inlet
-    })
-    
-    return report
+    return feed_prop, cooling_water_in_prop, cooling_water_out_prop, product_prop, HEX_Report

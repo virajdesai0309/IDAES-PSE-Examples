@@ -52,8 +52,8 @@ def setup_compressor_model(
     m.fs.feed.pressure.fix(pressure)
     m.fs.feed.temperature.fix(temperature)
 
-    m.fs.compressor.heat_duty.fix(2500000) # W
-    m.fs.compressor.deltaP.fix(0)
+    m.fs.compressor.deltaP.fix(250000) # Pa
+    m.fs.compressor.efficiency_isentropic.fix(0.85)
 
     print(degrees_of_freedom(m))
     

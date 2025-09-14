@@ -40,7 +40,8 @@ from idaes.models.properties.modular_properties.phase_equil.bubble_dew import (
     IdealBubbleDew, LogBubbleDew)
 from idaes.models.properties.modular_properties.phase_equil.forms import (
     fugacity, log_fugacity)
-from idaes.models.properties.modular_properties.pure import NIST, RPP5, Perrys, RPP4
+from idaes.models.properties.modular_properties.pure import (NIST, RPP4, RPP5,
+                                                             Perrys)
 from idaes.models.properties.modular_properties.state_definitions import FTPx
 # Import Pyomo units
 from pyomo.environ import units as pyunits
@@ -76,7 +77,7 @@ configuration = {
                     "a3": (Cp_data_Poling.loc["74-82-8"][6], pyunits.K**-3),
                     "a4": (Cp_data_Poling.loc["74-82-8"][7], pyunits.K**-4),
                 },
-                "entr_mol_form_vap_comp_ref": (0, pyunits.J / pyunits.mol / pyunits.K),
+                "entr_mol_form_vap_comp_ref": (chemicals.reaction.S0g(CASRN="74-82-8"), pyunits.J / pyunits.mol / pyunits.K),
                 "enth_mol_form_vap_comp_ref": (chemicals.reaction.Hfg(CASRN="74-82-8"), pyunits.J / pyunits.mol),     
             },
         },

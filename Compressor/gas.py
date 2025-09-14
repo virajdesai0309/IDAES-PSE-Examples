@@ -107,10 +107,6 @@ configuration = {
     },
     "pressure_ref": (1e5, pyunits.Pa),
     "temperature_ref": (300, pyunits.K),
-    # Defining phase equilibria
-    #"phases_in_equilibrium": [("Vap", "Liq")],
-    #"phase_equilibrium_state": {("Vap", "Liq"): SmoothVLE},
-    #"bubble_dew_method": LogBubbleDew,
     "parameter_data":{
         "PR_kappa": {
             ("methane", "methane"): 0.000,

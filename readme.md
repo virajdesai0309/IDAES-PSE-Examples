@@ -20,15 +20,17 @@ cd idaes-pse-examples
 
 ### 2. Create a Virtual Environment
 
+Tested with Python 3.12.
+
 ```
-python3 -m venv idaes-env
-source idaes-env/bin/activate  # On Windows: idaes-env\Scripts\activate
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
 ### 3. Install Dependencies
 ```
 pip install --upgrade pip
-pip install idaes-pse
+pip install -r requirements.txt
 idaes get-extensions
 ```
 
@@ -45,7 +47,7 @@ idaes get-extensions
 | [Pump](Pump) | Learn how to create and configure pump unit operation for process modeling. |
 | [Pump Curves](Pump_Curves) | Learn how to create and configure pump unit operation using pump curves for process modeling. |
 | [HeatExchanger 0D](Heat_Exchanger_0D) | Learn how to create and configure heat exchanger 0D unit operation and process modelling. |
-| [Compressor]() | Learn how to create and configure compressor unit operation and process modelling. |
+| [Compressor](Compressor) | Learn how to create and configure compressor unit operation and process modelling. |
 
 > [!IMPORTANT]
 > The following tutorials are in progress

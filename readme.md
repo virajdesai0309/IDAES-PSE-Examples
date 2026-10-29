@@ -47,6 +47,7 @@ idaes get-extensions
 | [Pump](Pump) | Learn how to create and configure pump unit operation for process modeling. |
 | [Pump Curves](Pump_Curves) | Learn how to create and configure pump unit operation using pump curves for process modeling. |
 | [HeatExchanger 0D](Heat_Exchanger_0D) | Learn how to create and configure heat exchanger 0D unit operation and process modelling. |
+| [HeatExchanger 1D](Heat_Exchanger_1D) | Learn how to create and configure heat exchanger 1D unit operation with temperature profiles and process modelling. |
 | [Compressor](Compressor) | Learn how to create and configure compressor unit operation and process modelling. |
 | [Turbine](Turbine) | Learn how to create and configure steam turbine unit operation using steam tables and process modelling. |
 | [Mixer](Mixer) | Learn how to create and configure mixer unit operation for mixing gas streams using Peng-Robinson and process modelling. |
@@ -57,7 +58,6 @@ idaes get-extensions
 
 | **Tutorial**           | **Description**                                                                 |
 |-------------------------|---------------------------------------------------------------------------------|
-| [HeatExchanger 1D](Heat_Exchanger_1D) | Learn how to create and configure heat exchanger 1D unit operation and process modelling. |
 | [Valve]() | Learn how to create and configure valve unit operation and process modelling. |
 | [Translator]() | Learn how to create and configure translator unit operation and process modelling. |
 | [Statejunction]() | Learn how to create and configure statejunction unit operation and process modelling. |

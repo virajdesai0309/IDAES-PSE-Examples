@@ -49,13 +49,13 @@ idaes get-extensions
 | [HeatExchanger 0D](Heat_Exchanger_0D) | Learn how to create and configure heat exchanger 0D unit operation and process modelling. |
 | [Compressor](Compressor) | Learn how to create and configure compressor unit operation and process modelling. |
 | [Turbine](Turbine) | Learn how to create and configure steam turbine unit operation using steam tables and process modelling. |
+| [Mixer](Mixer) | Learn how to create and configure mixer unit operation for mixing gas streams using Peng-Robinson and process modelling. |
 
 > [!IMPORTANT]
 > The following tutorials are in progress
 
 | **Tutorial**           | **Description**                                                                 |
 |-------------------------|---------------------------------------------------------------------------------|
-| [Mixer](Mixer) | Learn how to create and configure mixer unit operation and process modelling. |
 | [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit operation and process modelling. |
 | [HeatExchanger 1D](Heat_Exchanger_1D) | Learn how to create and configure heat exchanger 1D unit operation and process modelling. |
 | [Valve]() | Learn how to create and configure valve unit operation and process modelling. |

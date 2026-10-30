@@ -52,13 +52,13 @@ idaes get-extensions
 | [Turbine](Turbine) | Learn how to create and configure steam turbine unit operation using steam tables and process modelling. |
 | [Mixer](Mixer) | Learn how to create and configure mixer unit operation for mixing gas streams using Peng-Robinson and process modelling. |
 | [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit operation and process modelling. |
+| [Valve](Valve) | Learn how to create and configure valve unit operation for flashing liquid nitrogen, including adding a new component to the IDAES Helmholtz equation of state. |
 
 > [!IMPORTANT]
 > The following tutorials are in progress
 
 | **Tutorial**           | **Description**                                                                 |
 |-------------------------|---------------------------------------------------------------------------------|
-| [Valve]() | Learn how to create and configure valve unit operation and process modelling. |
 | [Translator]() | Learn how to create and configure translator unit operation and process modelling. |
 | [Statejunction]() | Learn how to create and configure statejunction unit operation and process modelling. |
 

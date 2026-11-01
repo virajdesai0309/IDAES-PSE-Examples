@@ -54,13 +54,13 @@ idaes get-extensions
 | [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit operation and process modelling. |
 | [Valve](Valve) | Learn how to create and configure valve unit operation for flashing liquid nitrogen, including adding a new component to the IDAES Helmholtz equation of state. |
 | [Conversion Reactor](Conversion%20Reactor) | Learn how to create and configure a conversion (stoichiometric) reactor for methane combustion, including reaction packages and limiting reactants. |
+| [Equilibrium Reactor](Equilibrium%20Reactor) | Learn how to create and configure an equilibrium reactor for the water-gas shift reaction, including a temperature-dependent equilibrium constant and a Translator between property packages. |
 
 > [!IMPORTANT]
 > The following tutorials are in progress
 
 | **Tutorial**           | **Description**                                                                 |
 |-------------------------|---------------------------------------------------------------------------------|
-| [Translator]() | Learn how to create and configure translator unit operation and process modelling. |
 | [Statejunction]() | Learn how to create and configure statejunction unit operation and process modelling. |
 
 ## Documentation and links

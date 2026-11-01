@@ -53,6 +53,7 @@ idaes get-extensions
 | [Mixer](Mixer) | Learn how to create and configure mixer unit operation for mixing gas streams using Peng-Robinson and process modelling. |
 | [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit operation and process modelling. |
 | [Valve](Valve) | Learn how to create and configure valve unit operation for flashing liquid nitrogen, including adding a new component to the IDAES Helmholtz equation of state. |
+| [Conversion Reactor](Conversion%20Reactor) | Learn how to create and configure a conversion (stoichiometric) reactor for methane combustion, including reaction packages and limiting reactants. |
 
 > [!IMPORTANT]
 > The following tutorials are in progress

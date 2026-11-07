@@ -56,6 +56,7 @@ idaes get-extensions
 | [Conversion Reactor](Conversion%20Reactor) | Learn how to create and configure a conversion (stoichiometric) reactor for methane combustion, including reaction packages and limiting reactants. |
 | [Equilibrium Reactor](Equilibrium%20Reactor) | Learn how to create and configure an equilibrium reactor for the water-gas shift reaction, including a temperature-dependent equilibrium constant and a Translator between property packages. |
 | [CSTR](Continous%20Stirred%20Tank%20Reactor) | Learn how to create and configure a continuous stirred tank reactor with reaction kinetics for methanol carbonylation (approximate comparison: UNIQUAC in DWSIM vs ideal liquid in IDAES). |
+| [PFR](Plug%20Flow%20Reactor) | Learn how to create and configure a packed bed plug flow reactor for steam methane reforming, including Xu-Froment catalytic kinetics, Ergun pressure drop and isothermal operation. |
 
 > [!IMPORTANT]
 > The following tutorials are in progress

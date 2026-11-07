@@ -47,19 +47,24 @@ idaes get-extensions
 | [Pump](Pump) | Learn how to create and configure pump unit operation for process modeling. |
 | [Pump Curves](Pump_Curves) | Learn how to create and configure pump unit operation using pump curves for process modeling. |
 | [HeatExchanger 0D](Heat_Exchanger_0D) | Learn how to create and configure heat exchanger 0D unit operation and process modelling. |
+| [HeatExchanger 1D](Heat_Exchanger_1D) | Learn how to create and configure heat exchanger 1D unit operation with temperature profiles and process modelling. |
 | [Compressor](Compressor) | Learn how to create and configure compressor unit operation and process modelling. |
 | [Turbine](Turbine) | Learn how to create and configure steam turbine unit operation using steam tables and process modelling. |
+| [Mixer](Mixer) | Learn how to create and configure mixer unit operation for mixing gas streams using Peng-Robinson and process modelling. |
+| [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit operation and process modelling. |
+| [Valve](Valve) | Learn how to create and configure valve unit operation for flashing liquid nitrogen, including adding a new component to the IDAES Helmholtz equation of state. |
+| [Conversion Reactor](Conversion%20Reactor) | Learn how to create and configure a conversion (stoichiometric) reactor for methane combustion, including reaction packages and limiting reactants. |
+| [Equilibrium Reactor](Equilibrium%20Reactor) | Learn how to create and configure an equilibrium reactor for the water-gas shift reaction, including a temperature-dependent equilibrium constant and a Translator between property packages. |
+| [CSTR](Continous%20Stirred%20Tank%20Reactor) | Learn how to create and configure a continuous stirred tank reactor with reaction kinetics for methanol carbonylation (approximate comparison: UNIQUAC in DWSIM vs ideal liquid in IDAES). |
+| [PFR](Plug%20Flow%20Reactor) | Learn how to create and configure a packed bed plug flow reactor for steam methane reforming, including Xu-Froment catalytic kinetics, Ergun pressure drop and isothermal operation. |
+| [Shortcut Column](Shortcut%20Column) | Learn how to build a custom IDAES unit model: a Fenske-Underwood-Gilliland shortcut distillation column for benzene-toluene. |
+| [Distillation Column](Distillation%20Column) | Learn how to create and configure a rigorous tray distillation column for benzene-toluene with Peng-Robinson, validated stage by stage, and check a shortcut column design. |
 
 > [!IMPORTANT]
 > The following tutorials are in progress
 
 | **Tutorial**           | **Description**                                                                 |
 |-------------------------|---------------------------------------------------------------------------------|
-| [Mixer](Mixer) | Learn how to create and configure mixer unit operation and process modelling. |
-| [Separator(Splitter)](Separator) | Learn how to create and configure separator aka splitter unit operation and process modelling. |
-| [HeatExchanger 1D](Heat_Exchanger_1D) | Learn how to create and configure heat exchanger 1D unit operation and process modelling. |
-| [Valve]() | Learn how to create and configure valve unit operation and process modelling. |
-| [Translator]() | Learn how to create and configure translator unit operation and process modelling. |
 | [Statejunction]() | Learn how to create and configure statejunction unit operation and process modelling. |
 
 ## Documentation and links

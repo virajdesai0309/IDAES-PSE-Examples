@@ -46,6 +46,7 @@ idaes get-extensions
 | [Heater](Heater_Cooler) | Learn how to create and configure heater unit operation and process modelling. |
 | [Pump](Pump) | Learn how to create and configure pump unit operation for process modeling. |
 | [Pump Curves](Pump_Curves) | Learn how to create and configure pump unit operation using pump curves for process modeling. |
+| [Pump Curves (DWSIM validated)](Pump%20Curves%20DWSim) | Learn how to model a pump from its head, efficiency and NPSH curves with smooth piecewise linear interpolation, validated against DWSIM. |
 | [HeatExchanger 0D](Heat_Exchanger_0D) | Learn how to create and configure heat exchanger 0D unit operation and process modelling. |
 | [HeatExchanger 1D](Heat_Exchanger_1D) | Learn how to create and configure heat exchanger 1D unit operation with temperature profiles and process modelling. |
 | [Compressor](Compressor) | Learn how to create and configure compressor unit operation and process modelling. |

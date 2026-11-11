@@ -60,6 +60,7 @@ idaes get-extensions
 | [PFR](Plug%20Flow%20Reactor) | Learn how to create and configure a packed bed plug flow reactor for steam methane reforming, including Xu-Froment catalytic kinetics, Ergun pressure drop and isothermal operation. |
 | [Shortcut Column](Shortcut%20Column) | Learn how to build a custom IDAES unit model: a Fenske-Underwood-Gilliland shortcut distillation column for benzene-toluene. |
 | [Distillation Column](Distillation%20Column) | Learn how to create and configure a rigorous tray distillation column for benzene-toluene with Peng-Robinson, validated stage by stage, and check a shortcut column design. |
+| [Chiller Skid](Refrigeration%20Chilled%20Water%20Skid/chiller_flowsheet_visualizer.ipynb) | Learn how to model a closed-loop R134a vapor compression chiller with floating condensing and evaporating pressures, validated against DWSIM. |
 
 > [!IMPORTANT]
 > The following tutorials are in progress

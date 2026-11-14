@@ -46,6 +46,7 @@ idaes get-extensions
 | [Heater](Heater_Cooler) | Learn how to create and configure heater unit operation and process modelling. |
 | [Pump](Pump) | Learn how to create and configure pump unit operation for process modeling. |
 | [Pump Curves](Pump_Curves) | Learn how to create and configure pump unit operation using pump curves for process modeling. |
+| [Pump Curves (DWSIM validated)](Pump%20Curves%20DWSim) | Learn how to model a pump from its head, efficiency and NPSH curves with smooth piecewise linear interpolation, validated against DWSIM. |
 | [HeatExchanger 0D](Heat_Exchanger_0D) | Learn how to create and configure heat exchanger 0D unit operation and process modelling. |
 | [HeatExchanger 1D](Heat_Exchanger_1D) | Learn how to create and configure heat exchanger 1D unit operation with temperature profiles and process modelling. |
 | [Compressor](Compressor) | Learn how to create and configure compressor unit operation and process modelling. |
@@ -59,6 +60,10 @@ idaes get-extensions
 | [PFR](Plug%20Flow%20Reactor) | Learn how to create and configure a packed bed plug flow reactor for steam methane reforming, including Xu-Froment catalytic kinetics, Ergun pressure drop and isothermal operation. |
 | [Shortcut Column](Shortcut%20Column) | Learn how to build a custom IDAES unit model: a Fenske-Underwood-Gilliland shortcut distillation column for benzene-toluene. |
 | [Distillation Column](Distillation%20Column) | Learn how to create and configure a rigorous tray distillation column for benzene-toluene with Peng-Robinson, validated stage by stage, and check a shortcut column design. |
+| [Chiller Skid](Refrigeration%20Chilled%20Water%20Skid/chiller_flowsheet_visualizer.ipynb) | Learn how to model a closed-loop R134a vapor compression chiller with floating condensing and evaporating pressures, validated against DWSIM. |
+| [Chiller Digital Twin Case Studies](Refrigeration%20Chilled%20Water%20Skid) | Condenser fouling vs COP and compressor power, energy cost and optimal cleaning interval, a fouling soft sensor, and operating optimization (setpoint reset, cooling water flow, part load). |
+| [Combined Cycle Gas Turbine](Combined%20Cycle%20Gas%20Turbine%20With%20Heat%20Recovery/ccgt_flowsheet_visualizer.ipynb) | Learn how to model a ~27 MW combined cycle power plant (gas turbine, single pressure HRSG and steam cycle) with natural gas combustion, Peng-Robinson flue gas and IAPWS-95 steam, validated against a DWSIM model built through the DWSIM Automation API. |
+| [CCGT Case Studies](Combined%20Cycle%20Gas%20Turbine%20With%20Heat%20Recovery) | Ambient temperature derating, part load with TIT control vs inlet guide vanes, economics (LCOE, fuel and carbon price, simple vs combined cycle, dispatch), and steam cycle design optimization (drum pressure, steam temperature, HRSG pinch). |
 
 > [!IMPORTANT]
 > The following tutorials are in progress

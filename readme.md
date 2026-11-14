@@ -62,6 +62,8 @@ idaes get-extensions
 | [Distillation Column](Distillation%20Column) | Learn how to create and configure a rigorous tray distillation column for benzene-toluene with Peng-Robinson, validated stage by stage, and check a shortcut column design. |
 | [Chiller Skid](Refrigeration%20Chilled%20Water%20Skid/chiller_flowsheet_visualizer.ipynb) | Learn how to model a closed-loop R134a vapor compression chiller with floating condensing and evaporating pressures, validated against DWSIM. |
 | [Chiller Digital Twin Case Studies](Refrigeration%20Chilled%20Water%20Skid) | Condenser fouling vs COP and compressor power, energy cost and optimal cleaning interval, a fouling soft sensor, and operating optimization (setpoint reset, cooling water flow, part load). |
+| [Combined Cycle Gas Turbine](Combined%20Cycle%20Gas%20Turbine%20With%20Heat%20Recovery/ccgt_flowsheet_visualizer.ipynb) | Learn how to model a ~27 MW combined cycle power plant (gas turbine, single pressure HRSG and steam cycle) with natural gas combustion, Peng-Robinson flue gas and IAPWS-95 steam, validated against a DWSIM model built through the DWSIM Automation API. |
+| [CCGT Case Studies](Combined%20Cycle%20Gas%20Turbine%20With%20Heat%20Recovery) | Ambient temperature derating, part load with TIT control vs inlet guide vanes, economics (LCOE, fuel and carbon price, simple vs combined cycle, dispatch), and steam cycle design optimization (drum pressure, steam temperature, HRSG pinch). |
 
 > [!IMPORTANT]
 > The following tutorials are in progress
